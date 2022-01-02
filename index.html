@@ -16,9 +16,16 @@
             background-repeat: no-repeat;
         }
 
+        @media only screen and (max-device-width: 800px) {
+         body {
+            background-color: #f7e3e7;
+            background-image: url('./e.jpg');
+            background-repeat: repeat;
+            
+     }
+         }
         nav,
         footer {
-            display: inline-block;
             background-color: #f7e3e7;
             width: 100%;
             display: flex;
@@ -310,10 +317,18 @@
 
             <!--Catalog-->
             <section id="catalogPage" style="display: none;">
-                <h2 style="margin: 40px 10px 10px 200px; padding: 20px 20px; 
-                    font-size: 44px; color: #e948a0; text-align: center; 
-                     font-style: oblique;
-                    background-color: #f7e3e7; border-radius: 15px; display: block; width: 1050px;">
+                <h2 style="margin: 40px auto 20px;
+                padding: 20px 20px;
+                font-size: 40px;
+                color: #e948a0;
+                text-align: center;
+                font-style: oblique;
+                background-color: #f7e3e7;
+                border-radius: 15px;
+                display: block;
+                width: 90%;
+                flex-wrap: inherit;
+                align-content: center;">
                     Най- добрите философски афоризми за животa
                 </h2>
                 <div class="card-box">
@@ -407,7 +422,7 @@
     const lukies = {
         1: 'Ще се чувствате по-жизнени от всякога. Здравето ви се пада.',
         2: 'Нека този ден да бъде денят, който ще те отведе към щастие, спокойствието и радостта.',
-        3: 'Ще се сгодите! Ще бъде незабравимо и много романтично.',
+        3: 'Дъжд ще те вали от всякакви пари.',
         4: 'Нова придобивка, за която отдавна сте мечтали.',
         5: 'Оставете сърцето ви да ви води днес, то няма да сбърка правилната посока.',
         6: 'Дъжд ще те вали от всякакви пари.',
@@ -436,3 +451,4 @@
 </script>
 
 </html>
+
