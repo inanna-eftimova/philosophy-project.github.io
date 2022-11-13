@@ -1,286 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <title>School Application</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
-
-        body {
-            background-color: #f7e3e7;
-            background-image: url('./back.jpg');
-            background-size: cover;
-            background-image: fixed;
-            background-repeat: no-repeat;
-        }
-
-        @media only screen and (max-device-width: 400px) {
-         body {
-            background-color: #f7e3e7;
-            background-image: url('./e.jpg');
-            background-repeat: repeat;
-            
-     }
-         }
-        nav,
-        footer {
-            background-color: #f7e3e7;
-            width: 100%;
-            display: flex;
-            font-size: 16px;
-            justify-content: space-around;
-            align-items: center;
-            margin-top: 0;
-            padding: 0 5px 0 3px;
-            margin: 0%;
-            color: #e948a0;
-            ;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #e948a0;
-            ;
-            font-size: 20px;
-            font-weight: bolder;
-            position: relative;
-            margin: 20px;
-        }
-
-        nav ul {
-            margin: 0 0 0 auto;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 2px;
-        }
-
-        li::before {
-            display: inline;
-        }
-
-        nav a {
-            text-decoration: none;
-            border-radius: 50%;
-            padding: 0.5em;
-            color: #e948a0;
-            ;
-        }
-
-        footer {
-            position: fixed;
-            width: 100%;
-            left: 0;
-            bottom: 0;
-            padding: 8px;
-            text-align: center;
-            color: #e948a0;
-            ;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            cursor: pointer;
-            color: #812859;
-            font-weight: bolder;
-        }
-
-        #welcomePage {
-            color: #45a29e;
-            font-size: 24px;
-            padding: 30px;
-            margin: 10px;
-        }
-
-        #welcomePage img {
-            width: 40%
-        }
-
-        nav>i {
-            width: 60px;
-            height: 60px;
-            margin: 3px 3px;
-        }
-
-        i {
-            font-size: 50px;
-            color: #e948a0;
-        }
-
-        #title {
-            background-color: #f7e3e7;
-            color: #e948a0;
-            display: inline-block;
-            margin: 0px 0px 15px 0px;
-            border-radius: 15px;
-            font-size: 24px;
-            padding: 10px 10px;
-            border: 2px solid pink;
-        }
-
-        q {
-            width: 20px;
-            height: 20px;
-        }
-
-        #notification {
-            background-color: #f7e3e7;
-            color: #e948a0;
-            border-radius: 15px;
-            font-size: 44px;
-            padding: 20px 20px;
-            position: absolute;
-            font-style: oblique;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        #notification button {
-            display: block;
-            padding: 20px 25px;
-            font-size: 14px;
-            font-style: italic;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            outline: none;
-            color: #f7e3e7;
-            background-color: #e948a0;
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 9px #999;
-        }
-
-        .card-box {
-            box-shadow: 0px 0px 30px 0px;
-            padding: 20px;
-            margin-left: 120px;
-            background-position: right 35% bottom 45%;
-            box-sizing: border-box;
-            border-radius: 15px;
-            float: left;
-            height: 370px;
-            max-height: 370px;
-            max-width: 300px;
-            color: rgba(29, 10, 114, 0.719);
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 70px;
-            margin-top: 50px;
-        }
-
-        .card-box p {
-            font-size: 24px;
-            color: rgb(71, 5, 5);
-            display: block;
-        }
-
-        .text {
-            background-color: #f7e3e7;
-            color: #e948a0;
-            margin: 30px;
-            padding: 10px;
-            border-radius: 15px;
-        }
-
-        .btn-group>a {
-            width: 200%;
-            height: 50px;
-            cursor: pointer;
-            border: none;
-            border-radius: 10px;
-            display: inline;
-            align-items: center;
-            justify-content: center;
-            background-color: #af3982;
-            background-image: linear-gradient(315deg, pink 0%, #0d324d 74%);
-            background-size: 200% 100%;
-            background-position: left;
-            background-repeat: no-repeat;
-            transition: 500ms;
-            color: white;
-            font-family: "Lato";
-            font-size: 20px;
-            margin-bottom: 10px;
-            margin-top: 20px;
-            padding: 10px;
-            text-decoration: none;
-        }
-
-        .btn-group>a:hover {
-            background-position: right;
-        }
-
-        .btn-group>a:before {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 16px;
-            font-weight: bold;
-            font-family: 'Lato';
-            position: absolute;
-            display: inline;
-            align-items: center;
-            justify-content: center;
-            width: 140px;
-            height: 40px;
-            background-color: #1b2845;
-            background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
-            transition: 500ms;
-        }
-
-        #catalogPage h1 {
-            color: white;
-            text-align: center;
-            margin-top: 30px;
-            font-size: 26px;
-            font-family: 'Lato';
-            text-shadow: 5px 2px black;
-        }
-
-        .card-box>img {
-            display: block;
-            width: 250px;
-            border-radius: 15px;
-
-        }
-
-        .btn-group {
-            margin: 0 auto;
-            margin-top: 20px;
-        }
-
-        #catalogPage>p {
-            display: inline-block;
-            font-size: 14px;
-            color: #e9e9e9;
-            font-weight: bolder;
-            text-align: center;
-            background-color: pink;
-            border-radius: 15px;
-            margin-top: 30px;
-            max-width: 100px;
-            max-height: 120px;
-            text-shadow: 2px 2px black solid;
-        }
-
-        html {
-            font-family: 'Lato';
-            font-size: 16px;
-            box-sizing: border-box;
-        }
-
-        *,
-        *::before,
-        *::after {
-            margin: auto;
-            padding: 0;
-            box-sizing: inherit;
-            line-height: 1.3;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
 </head>
 
@@ -293,9 +17,18 @@
                 <h1 style="font-family: 'Vujahday Script', cursive; font-size: 50px; margin-right: 0px;">Philosophy</h1>
                 <ul>
                     <!--All user-->
-                    <li><a id="catalog" href="#">Цитати</a></li>
-                    <li><a id="happyLuck" href="#">Късметче</a></li>
-
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Карта на времето</button>
+                            <div class="dropdown-content">
+                                <a id="catalog" href="#">Античност</a>
+                                <a id="middle" href="#">Средновековие</a>
+                                <a id="renaissance" href="#">Ренесанс</a>
+                                <a id="newTime" href="#">Ново Време</a>
+                                <a id="today" href="#">Съвременност</a>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -329,71 +62,550 @@
                 width: 90%;
                 flex-wrap: inherit;
                 align-content: center;">
-                    Най- добрите философски афоризми за животa
+                    А Н Т И Ч Н О С Т
                 </h2>
                 <div class="card-box">
-                    <img src="./1.jpeg">
+                    <img src="https://static.bnr.bg/gallery/cr/medium/5370791389c5ccda1f6f5f078fc7cd5d.jpg">
+                    <div class="text-title">ТАЛЕС</div>
                     <div class="text">
-                        -Единствената истинска мъдрост е да знаеш, че не знаеш нищо. -Сократ
+                        “Бащата на гръцката философия”. Търси материалния принцип на
+                        нещата /архе/ и начина на тяхното възникване и загиване. Принципът
+                        /архе/ при Талес е Водата. Всичко се състои от вода.
                     </div>
                 </div>
 
                 <div class="card-box">
-                    <img src="./2.jpeg">
+                    <img src="https://www.novavizia.com/wp-content/uploads/anaksimandyr.jpg">
+                    <div class="text-title">АНАКСИМАНДЪР</div>
                     <div class="text">
-                        -Добрите действия ни укрепват и вдъхновяват нови действия у другите.-Платон
+                        Първи оставя писмени съчинения по философия. Той възприел като
+                        пръв принцип една неопределена “безгранична”субстанция /апейрон/
+                        без качества. От нея най-напред се отделят горещото и студеното,
+                        влажното и сухото.
                     </div>
                 </div>
 
                 <div class="card-box">
-                    <img src="./3.jpeg">
+                    <img src="https://www.novavizia.com/wp-content/uploads/anaksimen.jpg">
+                    <div class="text-title">АНАКСИМЕН</div>
                     <div class="text">
-                        -По-добре е да смените мнение, отколкото да упорствате в неправилно.-Сократ.
+                        Приема за свой принцип въздуха, разглеждайки го като превръщат се
+                        чрез разширяване и свиване в огън, вятър, облаци, вода и земя.
                     </div>
-                </div>
-                <div class="card-box">
-                    <img src="./10.png">
-                    <div class="text">
-                        -Онова, което ви притеснява, ви доминира.-Джон Лок.
-                    </div>
-                </div>
-                <div class="card-box">
-                    <img src="./5.jpeg">
-                    <div class="text">
-                        -Търпението е горчиво, но плодовете му са сладки.-Жан-Жак Русо.
-                    </div>
-                </div>
-                <div class="card-box">
-                    <img src="./6.jpeg">
-                    <div class="text">
-                        -Знанието е сила.-Франсис Бейкън.
-                    </div>
-                </div>
-                <div class="card-box">
-                    <img src="./7.jpg">
-                    <div class="text">
-                        -Никога не бих умрял заради вярванията си, защото може да греша.-Бертран Ръсел.
-                    </div>
-                </div>
-                <div class="card-box">
-                    <img src="./8.jpg">
-                    <div class="text">
-                        -Не мога да се върна в миналото, защото тогава бях различен човек.-Луис Карол.
-                    </div>
-                </div>
-                <div class="card-box">
-                    <img src="./11.jpg">
-                    <div class="text">
-                        Чух и забравих. Видях и запомних. Преживях и разбрах. – Конфуций</div>
                 </div>
 
+                <div class="card-box">
+                    <img src="https://eee.bg/images/upload/b/4/b47e13f5-d46c-4ead-88c8-8d1375b19062.jpg">
+                    <div class="text-title">ПИТАГОР</div>
+                    <div class="text">
+                        Разглежда света като идеална хармония, подвластна на числата.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://tureligious.com.ua/wp-content/uploads/2019/11/ksen.jpg">
+                    <div class="text-title">КСЕНОФАН</div>
+                    <div class="text">
+                        “бащата на пантеизма”. Твърдял, че Бог е вечно единство,
+                        пронизващо универсума, управляващо чрез мисълта.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://www.novavizia.com/wp-content/uploads/heraklit.jpg">
+                    <div class="text-title">ХЕРАКЛИТ</div>
+                    <div class="text">
+                        Приел като субстанциален принцип вечния огън /Логос/. Всички
+                        неща възникват и се връщат в огъня чрез вечния процес на
+                        изменението. Всички неща са в непрекъснато движение. /панта рей/
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img
+                        src="data:image/jpeg;base64,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">
+                    <div class="text-title">КРАТИЛ</div>
+                    <div class="text">
+                        Покой, устойчивост не съществуват. Но познанието се основава на
+                        устойчивото в нещата.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://www.novavizia.com/wp-content/uploads/parmenid.jpg">
+                    <div class="text-title">ПАРМЕНИД</div>
+                    <div class="text">
+                        “Съществува битие, а небитие няма”. Многообразието, движението и
+                        изменението са противопоставени на единното, неизменното,
+                        неподвижното, вечното. Осъзнато разграничаване и
+                        противопоставяне на сенсуализма и рационализма.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://www.novavizia.com/wp-content/uploads/empedokyl.jpg">
+                    <div class="text-title">ЕМПЕДОКЪЛ</div>
+                    <div class="text">
+                        Многообразието на нещата не може да бъде обяснено само с един от
+                        елементите, а с всички тях заедно – “четирите стихии” – вода,
+                        въздух, огън, земя. Монизмът е заменен с плурализъм.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://www.euston96.com/wp-content/uploads/2019/04/Zeno-of-Elea-300x176.jpg">
+                    <div class="text-title">ЗЕНОН</div>
+                    <div class="text">
+                        Със Зенон започва осъзнатата и целенасочена критика на понятията.
+                        Съществува единствено битие, а то е единно и неподвижно. Битието
+                        изпълва цялото пространство. Празно пространство не съществува, но
+                        то е условие за движението. Движението предполага изменение.
+                        Изменението – начало и край. Битието е непреходно.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img
+                        src="https://sainte-anastasie.org/img/images/las-13-mejores-frases-de-gorgias-de-leontinos.jpg">
+                    <div class="text-title">ГОРГИЙ</div>
+                    <div class="text">
+                        Диалектиката му е отрицателна. Той твърдял следното: Нищо не
+                        съществува, ако съществуваше би било непознаваемо, ако беше
+                        познаваемо, щеше да бъде неизразимо. Мисленето за битието не
+                        съответства на самото битие.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img
+                        src="https://yestherapyhelps.com/images/frases-y-reflexiones/877/las-13-mejores-frases-celebres-de-anaxagoras.jpg">
+                    <div class="text-title">АНАКСАГОР</div>
+                    <div class="text">
+                        Според него панспермиите /семена на всичко, безкрайно делими/
+                        образуват света. Компонент на онтологичния модел на Анаксагор са
+                        стихиите Те са средата в която съществуват панспермиите.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://www.novavizia.com/wp-content/uploads/protagor.jpg">
+                    <div class="text-title">ПРОТАГОР</div>
+                    <div class="text">
+                        Признава съществуването на обективна реалност, но предмет на
+                        изследване са знанията за нея, а не самата тя. Знанията не са
+                        общозначими – няма обективен критерии за тяхната истинност.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://www.novavizia.com/wp-content/uploads/demokrit.jpg">
+                    <div class="text-title">ДЕМОКРИТ</div>
+                    <div class="text">
+                        Онтология – атоми и пустота. Атомите нямат друга причина за
+                        движение освен самите себе си. Пустотата е небитие, празно, нищо.
+                        Демокрит не признава случайността. На основата на онтологията си
+                        изгражда и космогоничните и космологическите си хипотези –
+                        безкрайност на космоса и безброй светове.
+                        Привърженик на идеята за разделението на труда като причина за
+                        появата на частната собственост, класите, държавата и войните
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://akropol.bg/storage/app/uploads/public/5df/9f7/f02/5df9f7f02bb98197327669.jpg">
+                    <div class="text-title">СОКРАТ</div>
+                    <div class="text">
+                        За него истинският предмет на познание не е природата, а самото
+                        знание. Направил предмет на изследване субективните мисли и
+                        мнения на хората, опитал се да извлече от това мислене универсални
+                        понятия, които да послужат за формиране на обективни критерии за
+                        поведение в практическия живот. Основна категория в Сократовата
+                        метафизика на нравствеността е “добродетел”.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://www.novavizia.com/wp-content/uploads/platon.jpg">
+                    <div class="text-title">ПЛАТОН</div>
+                    <div class="text">
+                        Основна категория в онтологическия модел на Планов е “идея”,
+                        “ейдос” – истинското битие-неунищожим и несътворим нематериален
+                        образец, съществуващ независимо от нещата и всеки отделен човек.
+                        Идеите са битие, материята – небитие. Физическата природа трябва
+                        да бъде отнесена и към битието и към небитието. В Платоновата
+                        гносеология познанието е анамнезис. За Платон държаната е
+                        тъждествена на обществото.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://akropol.bg/storage/app/uploads/public/5d5/2cd/a47/5d52cda479332338642232.jpg">
+                    <div class="text-title">АРИСТОТЕЛ</div>
+                    <div class="text">
+                        Хилеморфизъм – учение за материята и формата – стоят в основата на
+                        формирането и съществуването на първите същности – отделните
+                        тела. Същностите, чрез които осмисляме реалността Аристотел
+                        нарича категории. Той посочва десет всеобщи рода на битието:
+                        същност, количество, качество, отношение, място, време, положение,
+                        обладание, действие и страдание. В центъра на неговата философия
+                        на обществото са практическите науки – етика и политика.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://www.novavizia.com/wp-content/uploads/piron.jpg">
+                    <div class="text-title">ПИРОН</div>
+                    <div class="text">
+                        Скептик. Основна цел е опровергаването на догмите. Изразява се в
+                        отрицателен, а не в положителен смисъл. “За всяка дума има и
+                        обратна”. Известни са десет стари Пиронови “тропи” насочени
+                        против обикновено съзнание и обикновената вяра.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://www.novavizia.com/wp-content/uploads/epikur.jpg">
+                    <div class="text-title">ЕПИКУР</div>
+                    <div class="text">
+                        Възгледите му са насочени към етиката – да се освободи човекът от
+                        страха, от смъртта, от боговете. Онтологически модел –
+                        съществуването на прости тела и празно пространство. Целта на
+                        практическата философия, на етиката на Епикур е утвърждаване
+                        единичността и независимостта, свободата на самосъзнанието на
+                        индивида.
+                    </div>
+                </div>
+            </section>
+
+            <section id="middleAges" style="display: none;">
+                <h2 style="margin: 40px auto 20px;
+                padding: 20px 20px;
+                font-size: 40px;
+                color: #e948a0;
+                text-align: center;
+                font-style: oblique;
+                background-color: #f7e3e7;
+                border-radius: 15px;
+                display: block;
+                width: 90%;
+                flex-wrap: inherit;
+                align-content: center;">
+                    С Р Е Д Н О В Е К О В И Е
+                </h2>
+                <div class="card-box">
+                    <img src="https://static.bnr.bg/gallery/cr/medium/198c8746776dcb01a99f5a1fad6329c4.jpg">
+                    <div class="text-title">АВРЕЛИЙ АВГУСТИН</div>
+                    <div class="text">
+                        Най-видния от авторите, създали християнския неоплатонизъм.
+                        Според него светът е създаден от Бог. Излага концепция, че времето
+                        може би е разтягане на човешката душа, че миналото не съществува,
+                        защото помним за него, настоящето – защото го преживяваме
+                        актуално, бъдещето – поради очакването то да настъпи. Човекът е
+                        субстанциално единство на тяло и душа.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://www.chitatel.net/wp-content/uploads/Peter-Abelard.jpg">
+                    <div class="text-title">ПИЕР АБЕЛАР</div>
+                    <div class="text">
+                        Номиналист. За него универсалното битие може да се отнася или към
+                        нещата или към думите. Универсалиите са думи, фиксиращи обща
+                        представа, но отнасящи се и към отделните неща, без да им
+                        съответства нещо отделно. В своята метафизика на нравствеността
+                        поставя акцента върху осмислеността на деянието
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://kultura.bg/web/wp-content/uploads/2013/12/milton-11.jpg">
+                    <div class="text-title">ДЖОН ДЪНС СКОТ</div>
+                    <div class="text">
+                        За Скот вродената идея за безкрайно същество не е доказателство за
+                        съществуването на Бога. Познанието за висшите същности и най-вече
+                        за Бога е опосредствано от познанието чрез сетивата. Основният
+                        предмет на интелекта е битието, но той не го отнася към категориите.
+                    </div>
+                </div>
+            </section>
+
+            <section id="renaissanceAges" style="display: none;">
+                <h2 style="margin: 40px auto 20px;
+                padding: 20px 20px;
+                font-size: 40px;
+                color: #e948a0;
+                text-align: center;
+                font-style: oblique;
+                background-color: #f7e3e7;
+                border-radius: 15px;
+                display: block;
+                width: 90%;
+                flex-wrap: inherit;
+                align-content: center;">
+                    Р Е Н Е С А Н С
+                </h2>
+                <div class="card-box">
+                    <img src="https://razloginfo.com/wp-content/uploads/2022/02/bruno.jpg">
+                    <div class="text-title">ДЖОРДАНО БРУНО</div>
+                    <div class="text">
+                        Изпитва силното влияние на идеите на античните философи. Две
+                        централни идеи – за безкрайния универсум с безкрайните светове и за
+                        материята, която е изградена от отделни атоми. За Бруно
+                        универсумът е Бог. Цел на познанието за него е разкриването на
+                        противоположностите. Етиката на Бруно утвърждава безграничната
+                        любов към безкрайното.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://www.novavizia.com/wp-content/uploads/nikolaj-kuzanski.jpg">
+                    <div class="text-title">НИКОЛАЙ КУЗАНСКИ</div>
+                    <div class="text">
+                        Значимите проблеми на познанието са Бог, Светът Христос.
+                        Приел за себе максимата на Сократ “Знам, че нищо не знам”. Христос
+                        е посредникът между човека и Бога. Човекът е “крайно-безкрайно”
+                        същество, краен като тяло безкраен чрез своя дух. Човекът е
+                        микрокосмос – човешката природа събира в себе си космоса.
+                    </div>
+                </div>
 
             </section>
 
-            <section id="notification" style="display: none;">
-                <p>Inana</p>
-                <button>Thanks!</button>
+            <section id="newAges" style="display: none;">
+                <h2 style="margin: 40px auto 20px;
+                padding: 20px 20px;
+                font-size: 40px;
+                color: #e948a0;
+                text-align: center;
+                font-style: oblique;
+                background-color: #f7e3e7;
+                border-radius: 15px;
+                display: block;
+                width: 90%;
+                flex-wrap: inherit;
+                align-content: center;">
+                    Н о в о В р е м е
+                </h2>
+                <div class="card-box">
+                    <img src="https://www.novavizia.com/wp-content/uploads/fransis-bejkyn.jpg">
+                    <div class="text-title">ФРЕНСИС БЕЙКЪН</div>
+                    <div class="text">
+                        Знанието на човека е и неговото могъщество, защото непознаването
+                        на причините затруднява действията. Природата може да бъде
+                        победена само като й се подчиняваме. Знанието е сила. Бейкън
+                        посочва четири типа “идоли на ума” – идолите на рода-идващи от
+                        самата човешка природа, идолите на пещерата – заблужденията на
+                        отделния човек, идолите на площада и идолите на театъра –
+                        призраците на думите и теориите. Според Бейкън съществуват два
+                        пътя на познание на природата – предварително знание, извлечено от
+                        разума и тълкуване на природата. Логиката и методологията на
+                        Бейкън се основават на определена епистемология – от фактите към
+                        теоретичните изводи.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img
+                        src="https://cdn.britannica.com/03/11003-050-CB252C79/Thomas-Hobbes-detail-oil-painting-John-Michael.jpg?w=740&h=416&c=crop">
+                    <div class="text-title">ТОМАС ХОБС</div>
+                    <div class="text">
+                        Действителността трябва да се състои от материални тела, за да
+                        въздейства върху сетивата ни. Всичко съществуващо самостоятелно
+                        извън съзнанието – тяло. Той дели телата на естествени и изкуствени
+                        – за да може тялото като онтологична единица да обхваща и
+                        сътвореното от природата и сътвореното от човека. Хобс признава
+                        природата на човека за неизменна. В основата на нравствеността
+                        лежи естественият закон за стремеж към самосъхранение и
+                        удовлетворяване на потребностите.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img
+                        src="https://cdn.britannica.com/57/215357-138-BCF2F67C/Top-questions-answers-Rene-Descartes.jpg?w=800&h=450&c=crop">
+                    <div class="text-title">РЕНЕ ДЕКАРТ</div>
+                    <div class="text">
+                        Движение от разума към сетивните, емпирични факти. Превръща
+                        принципа за тъждество на мислене и битие в основополагащ за своята
+                        теория на познанието. Човекът е машина, съединена с духа.
+                        Съществуването на Бога е основен аргумент, потвърждаващ
+                        тъждеството на идеите и независещата от духа реалност.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://static.bnr.bg/gallery/e2/e2f94555b045231e26f4b52cee3d235d.jpg">
+                    <div class="text-title">ДЖОН ЛОК</div>
+                    <div class="text">
+                        Сенсуалист и емпирик. Познанието за реално съществуване се свежда
+                        до интуитивно познание за собственото ни съществуване,
+                        демонстративно познание за съществуването на бога, сетивно
+                        познание на малко на брой неща. Моралното добро за Лок е
+                        подчиняване на човешката воля на закона, коренящ се в божествената
+                        воля.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://www.novavizia.com/wp-content/uploads/baruh-spinoza.jpg">
+                    <div class="text-title">БЕНЕДИКТ СПИНОЗА</div>
+                    <div class="text">
+                        Философията трябва да има строго научна форма и да бъде изградена
+                        по математически образец. Ключово във философията на Спиноза е
+                        понятието “субстанция” – единна, неделима и безкрайна, тъждествена
+                        на природата, абсолютна същност на всичко, равна на бог, само една.
+                        В учението си за човека Спиноза отхвърля идеята за свобода на
+                        волята. Волята съвпада с разума. В центъра на етиката му е понятието
+                        за “свободния човек” който се ръководи в своята дейност единствено
+                        от разума.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img
+                        src="https://yestherapyhelps.com/images/psicologia/967/la-teoria-epistemologica-de-gottfried-leibniz.jpg">
+                    <div class="text-title">ГОТФРИД-ВИЛХЕМ ЛАЙБНИЦ</div>
+                    <div class="text">
+                        Субстанциален е единствено светът на конкретното. Пространството
+                        е изпълнено с делима до безкрайност материя, едновременно твърда и
+                        течна. Всяка нейна частица притежава собствено движение
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://static.bnr.bg/gallery/cr/medium/f12ebeb30d3237e2ae21098f8aa05745.jpg">
+                    <div class="text-title">ДЖОРДЖ БЪРКЛИ</div>
+                    <div class="text">
+                        Единствена съществуваща реалност са идеите. Философията на
+                        Бъркли: номининализъм – отхвърляне съществуването на общи
+                        същности и полезността на общите идеи – общото е само дува;
+                        сенсуализъм – да съществува означава да бъде възприемано;
+                        емпиризъм – единствен източник на познание – опитът;
+                        феноменализъм – обектите на нашето познание са феномени на съзнанието
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://www.novavizia.com/wp-content/uploads/dejvid-hyum.jpg">
+                    <div class="text-title">ДЕЙВИД ХЮМ</div>
+                    <div class="text">
+                        Познанието на фактите се основава на отношението между причина и
+                        действие.Свобода – способността да действаме или да не действаме
+                        съобразно решенията на волята. Случайност в природата не
+                        съществува. Хюм не приема религиозната докрина. Единственията
+                        аргумент доказващ съществуването на божества, идва от реда в
+                        природата. Но от реда в природата могат да се правят изводи само за
+                        реда в природата. В основата на етиката на Хюм стои концепцията за
+                        неименната човешка природа. Във философията на историята Хюм е
+                        противник както на феодално – аристократическата идея за “властта
+                        от бога”, така и от договорната концепция за произхода на държавата.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://www.novavizia.com/wp-content/uploads/imanuel-kant.jpg">
+                    <div class="text-title">ИМАНУЕЛ КАНТ</div>
+                    <div class="text">
+                        Философията му изследва света на познанието, на нравствеността.
+                        Структурата на реалността е структура на човешкото съзнание.
+                        Пространството и времето са априорни форми на сетивността.
+                        Кантовата представа за нравственост – длъжен си, отнасяй се към
+                        другите така, както би желал те да се отнасят към теб; да постъпваш
+                        така, че твоята постъпка да се превърне във всеобщ закон, в норма.
+                        Кант развива идеите за свободата на личността , за доброволното
+                        подчинение на общоприетите норми и др.
+                    </div>
+                </div>
             </section>
+
+            <section id="todayAge" style="display: none;">
+                <h2 style="margin: 40px auto 20px;
+                padding: 20px 20px;
+                font-size: 40px;
+                color: #e948a0;
+                text-align: center;
+                font-style: oblique;
+                background-color: #f7e3e7;
+                border-radius: 15px;
+                display: block;
+                width: 90%;
+                flex-wrap: inherit;
+                align-content: center;">
+                    СЪВРЕМЕННОСТ / от 1850 г. /
+                </h2>
+                <div class="card-box">
+                    <img src="https://static.dw.com/image/39323077_303.jpg">
+                    <div class="text-title">КАРЛ МАРКС</div>
+                    <div class="text">
+                        Той смята , че първичната реалност е материална. Материализмът му
+                        е свързан с действителните основни източници на живота на
+                        истинските хора от народа, опитващи се да оцелеят, а не с фалшивите
+                        идеали на интелектуалците, поетите и артистите. Маркс се интересува
+                        от проблемите на човешкото благополучие. Всяко човешко общество
+                        е съставено от две нива: икономическа база /субструктура/ и
+                        обществена надстройка /суперструктура/. Сърцевината на
+                        икономическата база е начинът на производство. Маркс разглежда
+                        европейското общество като създадено на две основни класи –
+                        пролетариат и буржоазия, които са в непрекъснат конфликт.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://conservative.bg/wp-content/uploads/2019/04/hayek.jpg">
+                    <div class="text-title">ФРИДРИХ ХАЙЕК</div>
+                    <div class="text">
+                        Скептик. Подлага на съмнение възможностите на човешкия разум да
+                        опознае икономическата действителност такава каквато е. Човешкото
+                        съзнание не може да доминира над обществото. Разумът е неспособен
+                        да опознае цялата действително. Обществото не може да се управлява
+                        целенасочено. Основен критерий на либералното общество е
+                        свободата. Върховна власт – закон.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://magnifisonz.com/wp-content/uploads/2017/04/Keins-2.jpg">
+                    <div class="text-title">ДЖОН М. КЕЙНС</div>
+                    <div class="text">
+                        Създател на “нова икономическа наука”.Обяснява икономическите
+                        явления чрез психиката на хората. Решаващо значение имат
+                        склонностите на хората – към потребление, към спестяване. Причини
+                        за икономическите кризи – изменение в настроението на хората
+                        –оптимистично или песимистично. Широко използва категорията
+                        “очакване”.
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://cao.bg/Images/Uploads/2013/07/karl-popper_.jpg">
+                    <div class="text-title">КАРЛ ПОПЪР</div>
+                    <div class="text">
+                        За него би трябвало да съществува поне един действително
+                        философски проблем – за познанието на света и на нас самите, за
+                        нашето знание като част от света. За Попър индукцията не
+                        съществува. Извеждането на теорията от частни изказвания,
+                        верифицирани от опита е логически недопустимо. Теориите никога не
+                        са емпирически верицируеми. Той предлага една теория да се счита
+                        за емпирична или научна само ако е възможна опитна проверка, която
+                        обаче трябва не да верифицира, а да фалшифицира.
+                    </div>
+                </div>
+
+
+                <div class="card-box">
+                    <img src="https://www.dunavmost.com/snimka/201711/728_416/79a5a3c7df4e45018b2b77e34bd7a6ee.jpg">
+                    <div class="text-title">МИЛТЪН ФРИДМЪН</div>
+                    <div class="text">
+                        Монетарист, противник на политиката на пълна заетост. Смята, че
+                        паричният пазар трябва да бъде свободен. Слага началото на
+                        инструментализма –възглед според който научните твърдения,
+                        хипотези, теории са удобни инструменти за предвиждане, а не за
+                        обяснение. Привърженик на математическите методи на изследване.
+                    </div>
+                </div>
+
+            </section>
+
         </main>
 
 
@@ -409,46 +621,58 @@
     document.getElementById('home').addEventListener('click', (e) => {
         e.preventDefault();
         document.getElementById('catalogPage').style.display = "none";
+        document.getElementById('middleAges').style.display = "none";
+        document.getElementById('renaissanceAges').style.display = "none";
         document.getElementById('welcomePage').style.display = "block";
-        document.getElementById('notification').style.display = "none";
+        document.getElementById('newAges').style.display = "none";
+        document.getElementById('todayAge').style.display = "none";
     });
     document.getElementById('catalog').addEventListener('click', (e) => {
         e.preventDefault();
         document.getElementById('catalogPage').style.display = "block";
+        document.getElementById('middleAges').style.display = "none";
+        document.getElementById('renaissanceAges').style.display = "none";
         document.getElementById('welcomePage').style.display = "none";
-        document.getElementById('notification').style.display = "none";
+        document.getElementById('newAges').style.display = "none";
+        document.getElementById('todayAge').style.display = "none";
     });
-
-    const lukies = {
-        1: 'Ще се чувствате по-жизнени от всякога. Здравето ви се пада.',
-        2: 'Нека този ден да бъде денят, който ще те отведе към щастие, спокойствието и радостта.',
-        3: 'Дъжд ще те вали от всякакви пари.',
-        4: 'Нова придобивка, за която отдавна сте мечтали.',
-        5: 'Оставете сърцето ви да ви води днес, то няма да сбърка правилната посока.',
-        6: 'Дъжд ще те вали от всякакви пари.',
-        7: 'Трудните пътища често водят до красиви дестинации.',
-        8: 'Предстои повишение, заслужавате го без съмнение.',
-        9: 'Днес е добър ден да започнете нещо ново.',
-        10: 'Не поглеждай назад и върви само напред. Чака те светло бъдеще!'
-    };
-
-    document.getElementById('happyLuck').addEventListener('click', (e) => {
+    document.getElementById('middle').addEventListener('click', (e) => {
         e.preventDefault();
         document.getElementById('catalogPage').style.display = "none";
+        document.getElementById('middleAges').style.display = "block";
+        document.getElementById('renaissanceAges').style.display = "none";
         document.getElementById('welcomePage').style.display = "none";
-        document.getElementById('notification').style.display = "block";
-        let minimum = 1;
-        let maximum = 10;
-        let randomnumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
-        document.querySelector('#notification p').textContent = lukies[randomnumber];
-        document.querySelector('#notification button').addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById('catalogPage').style.display = "block";
-            document.getElementById('welcomePage').style.display = "none";
-            document.getElementById('notification').style.display = "none";
-        })
-    })
+        document.getElementById('newAges').style.display = "none";
+        document.getElementById('todayAge').style.display = "none";
+    });
+    document.getElementById('renaissance').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('catalogPage').style.display = "none";
+        document.getElementById('middleAges').style.display = "none";
+        document.getElementById('renaissanceAges').style.display = "block";
+        document.getElementById('welcomePage').style.display = "none";
+        document.getElementById('newAges').style.display = "none";
+        document.getElementById('todayAge').style.display = "none";
+    });
+    document.getElementById('newTime').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('catalogPage').style.display = "none";
+        document.getElementById('newAges').style.display = "block";
+        document.getElementById('middleAges').style.display = "none";
+        document.getElementById('renaissanceAges').style.display = "none";
+        document.getElementById('welcomePage').style.display = "none";
+        document.getElementById('todayAge').style.display = "none";
+    });
+    document.getElementById('today').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('catalogPage').style.display = "none";
+        document.getElementById('newAges').style.display = "none";
+        document.getElementById('middleAges').style.display = "none";
+        document.getElementById('renaissanceAges').style.display = "none";
+        document.getElementById('welcomePage').style.display = "none";
+        document.getElementById('todayAge').style.display = "block";
+    });
+
 </script>
 
 </html>
-
