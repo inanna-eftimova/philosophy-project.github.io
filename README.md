@@ -1,4 +1,4 @@
-# philosophy-project.github.io
+# Philosophy School Project
 
 This is the school web page project for Philosophy &#127776; &#127776;
 
